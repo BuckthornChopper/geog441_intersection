@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>At an Intersection</title>
+  <style>
+    :root{
+      --max-width: 1400px;
+      --bg-overlay: rgba(10,10,10,0.45);
+      --accent: #ffd166;
+      --glass: rgba(255,255,255,0.08);
+      --radius: 12px;
+    }
+
+    /* Page reset */
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#fff;background:#111}
+
+    /* Center the 16:9 frame vertically and horizontally */
+    .stage{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    /* The 16:9 frame */
+    .frame{
+      width:100%;
+      max-width:var(--max-width);
+      aspect-ratio:16/9; /* keeps the frame 16:9 */
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 20px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+      background-color:#222;
+    }
+
+    /* Background image. Replace the URL below with your highway intersection image. */
+    .frame::before{
+      content:'';
+      position:absolute;inset:0;
+      background-image:url('images/highway-intersection.jpg');
+      background-size:cover;
+      background-position:center center;
+      filter:grayscale(0.05) contrast(0.95) saturate(0.9) brightness(0.9);
+      transform:scale(1.02);
+      z-index:0;
+    }
+
+    /* Dark overlay for legibility */
+    .overlay{position:absolute;inset:0;background:var(--bg-overlay);z-index:1}
+
+    .content{
+      position:relative;z-index:2;display:flex;flex-direction:column;gap:18px;padding:36px 40px; height:100%;
+    }
+
+    header{display:flex;align-items:flex-start;gap:18px}
+    h1{margin:0;font-size:clamp(1.6rem, 3.2vw, 2.8rem);letter-spacing:0.02em}
+
+    .lead{
+      margin:0;font-size:clamp(1rem, 2vw, 1.15rem);max-width:70ch;line-height:1.45;color:rgba(255,255,255,0.95)
+    }
+
+    nav{margin-top:auto}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
+    .links a{
+      text-decoration:none;padding:10px 14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      color:var(--accent);font-weight:600;font-size:0.95rem;backdrop-filter:blur(6px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.45);
+    }
+
+    /* small helper for a subtle caption */
+    .caption{position:absolute;right:18px;bottom:18px;font-size:0.85rem;color:rgba(255,255,255,0.6)}
+
+    /* ensure keyboard focus is visible */
+    a:focus{outline:3px solid rgba(255,209,102,0.18);outline-offset:3px}
+
+    /* Responsive tweaks */
+    @media (max-width:520px){
+      .content{padding:20px}
+      .links a{padding:8px 10px;font-size:0.85rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <article class="frame" role="main" aria-labelledby="page-title">
+      <div class="overlay" aria-hidden="true"></div>
+      <div class="content">
+        <header>
+          <h1 id="page-title">At an Intersection</h1>
+        </header>
+
+        <p class="lead">The geography of the intersection of Cedarburg and Mequon Roads</p>
+
+        <nav aria-label="Related pages">
+          <div class="links">
+            <a href="background.html">Background</a>
+            <a href="early-days.html">Early Days</a>
+            <a href="changes.html">Changes</a>
+            <a href="the-present.html">The Present</a>
+            <a href="futures.html">Futures</a>
+          </div>
+        </nav>
+
+        <div class="caption">Replace <code>images/highway-intersection.jpg</code> with your chosen image file.</div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
