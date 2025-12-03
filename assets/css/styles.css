@@ -2,7 +2,7 @@
 body{margin:0;font-family:Inter,system-ui,sans-serif;color:#fff;background:#111}
 .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
 .frame{width:100%;max-width:1400px;aspect-ratio:16/9;position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.6)}
-.frame-bg::before{content:'';position:fixed;inset:0;background:url('assets/images/highway-intersection.jpg') center/cover;z-index:-1;filter:brightness(0.8)}
+.frame-bg::before{content:'';position:fixed;inset:0;background:url('assets/images/highway-intersection.png') center/cover;z-index:-1;filter:brightness(0.8)}
 .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45)}
 .content{position:relative;z-index:2;display:flex;flex-direction:column;gap:18px;padding:36px 40px;height:100%}
 .lead{font-size:1.2rem;max-width:70ch;line-height:1.45}
@@ -10,6 +10,6 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#fff;background:#111}
 .links a{text-decoration:none;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.1);color:#ffd166;font-weight:600;backdrop-filter:blur(6px)}
 
 /* Subpages */
-.page-bg{background:#111 url('assets/images/highway-intersection-blur.jpg') center/cover fixed;}
+.page-bg{background:#111 url('assets/images/highway-intersection.png') center/cover fixed;}
 .page{max-width:900px;margin:0 auto;padding:40px;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,0.6)}
 .page a{color:#ffd166}
