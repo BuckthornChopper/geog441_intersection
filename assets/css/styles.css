@@ -7,7 +7,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#fff;background:#122}
 .content{position:relative;z-index:2;display:flex;flex-direction:column;gap:18px;padding:36px 40px;height:100%}
 .lead{font-size:1.2rem;max-width:70ch;line-height:1.45}
 .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto}
-.links a{text-decoration:none;padding:10px 14px;border-radius:10px;background:rgba(255,0,255,0.1);color:#ffd1ff;font-weight:600;backdrop-filter:blur(6px)}
+.links a{text-decoration:none;padding:10px 14px;border-radius:10px;background:rgba(255,0,255,0.1);color:#ffd166;font-weight:600;backdrop-filter:blur(6px)}
 
 /* Subpages */
 .page-bg{background:#111 url('assets/images/highway-intersection.png') center/cover fixed;}
