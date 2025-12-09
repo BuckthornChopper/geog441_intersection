@@ -1,0 +1,116 @@
+/* Dark theme base */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #111;
+  color: #eee;
+  display: flex;
+  min-height: 100vh;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Left nav column */
+nav {
+  width: 200px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.1);
+  color: #ffd166;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Current page button dimmed */
+nav a.active {
+  color: #aaa;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+
+/* Main content area */
+.main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Sub head */
+.subhead {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffd166;
+}
+
+/* Text + image blocks */
+.block {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Text always on left, image always on right */
+.block p {
+  flex: 1;
+  min-width: 50%;
+  line-height: 1.5;
+}
+
+.block img {
+  flex: 1;
+  min-width: 50%;
+  max-width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  object-fit: cover;
+}
+
+/* NEW: Full-width text block option */
+.fulltext {
+  line-height: 1.6;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 📱 Responsive tweak for small screens */
+@media (max-width: 768px) {
+  .block {
+    flex-direction: column;   /* stack vertically */
+  }
+
+  .block p, 
+  .block img {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .block img {
+    margin-top: 20px;        /* spacing between text and image */
+    height: auto;            /* let image scale naturally */
+  }
+}
