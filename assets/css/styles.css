@@ -97,6 +97,20 @@ nav a.active {
   max-width: 100%;
 }
 
+  /* Reduce or remove the bottom margin of the paragraph */
+  .no-bottom-margin {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    /* Optional: you can add padding-bottom: 0; if necessary, but margin is usually the culprit */
+  }
+
+  /* Reduce or remove the top margin of the unordered list */
+  .no-top-margin {
+    margin-top: 0;
+    padding-top: 0;
+    /* Optional: you can add padding-top: 0; if necessary */
+  }
+
 /* 📱 Responsive tweak for small screens */
 @media (max-width: 768px) {
   .block {
@@ -114,3 +128,47 @@ nav a.active {
     height: auto;            /* let image scale naturally */
   }
 }
+
+/* Added 12/10/25 to control vertical spacing*/
+/* Reset margins and paddings for text elements */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set consistent spacing */
+p {
+  margin-bottom: 1em;   /* adjust to taste */
+  line-height: 1.5;     /* good readability */
+}
+
+ul, ol {
+  margin-bottom: 1em;   /* spacing after lists */
+  padding-left: 1.5em;  /* indent bullets/numbers */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em; /* spacing after headings */
+  line-height: 1.2;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.page-nav a img {
+  width: 48px;
+  height: 48px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.page-nav a img:hover {
+  box-shadow: 0 0 20px rgba(255, 209, 102, 0.8);
+  transform: scale(1.1);
+}
+
