@@ -172,3 +172,50 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.1);
 }
 
+/* APA Citations styling, added 12/10/25 */
+/* Body text suggestions */
+/* body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+}
+
+/* In-text citation punctuation follows APA rules (no extra styling needed) */
+
+/* Reference list container */
+.references {
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+/* APA hanging indent: 0.5 inch ≈ 1.27cm; here ~24px */
+.references .ref-item {
+  list-style: none;
+  margin: 0 0 0.6rem 0;
+  padding-left: 24px;
+  text-indent: -24px;
+}
+
+
+/* Title */
+references .title {
+  font-size: 2.5rem;
+  font-weight: reg;
+  margin-bottom: 20px;
+}
+
+
+/* Keep spacing tight between inline parts */
+.ref-item > span {
+  display: inline;
+}
+
+/* Optional: distinguish URLs and DOIs */
+.ref-item .url, .ref-item .doi {
+  display: inline;
+  word-break: break-all;
+}
+
+/* Optional: small-caps initials are NOT required; avoid all-caps */
+
